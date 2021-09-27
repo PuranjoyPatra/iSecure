@@ -25,7 +25,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true)
 </head>
 
 <body>
-    <?php include "partial/_nav.php"; ?>
+    <?php include "_nav.php"; ?>
     <div class="container mt-3">
         <h1>Welcome - <?php echo $_SESSION['usrname']; ?> to our Website </h1>
         <!-- demo text  -->

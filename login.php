@@ -2,7 +2,7 @@
     $login=false;
     $ShowErr=false;
 if ($_SERVER['REQUEST_METHOD']=="POST") {
-    include "partial/_dbconnect.php";
+    include('_dbconnect.php');
     $uname=$_POST["uname"];
     $password=$_POST["password"];
     
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 </head>
 
 <body>
-    <?php include "partial/_nav.php"; ?>
+    <?php include('_nav.php'); ?>
     <?php 
        if ($login) {
            header("location:index.php");
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 
     <div class="container my-4">
         <h1 class="text-center">Log In to our Website.</h1>
-        <form action="/LogInSystem/login.php" method="POST">
+        <form action="login.php" method="POST">
             <div class="form-group">
                 <label for="exampleInputEmail1">User Name:</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"

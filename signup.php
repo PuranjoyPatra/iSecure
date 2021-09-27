@@ -2,7 +2,7 @@
     $ShowAlert=false;
     $ShowErr=false;
 if ($_SERVER['REQUEST_METHOD']=="POST") {
-    include "partial/_dbconnect.php";
+    include "_dbconnect.php";
     $uname=$_POST["uname"];
     $password=$_POST["password"];
     $cpassword=$_POST["cpassword"];
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     <title>Sign Up Page</title>
   </head>
   <body>
-      <?php include "partial/_nav.php"; ?>
+      <?php include "_nav.php"; ?>
 
       <?php
       if ($ShowAlert) {
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     ?>
     <div class="container mt-3">
         <h1 class="text-center" >Please Sign Up to our Website.</h1>
-    <form action="/LogInSystem/signup.php" method="POST">
+    <form action="signup.php" method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">User Name:</label>
     <input maxlength="11" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="uname">
